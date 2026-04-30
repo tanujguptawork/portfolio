@@ -1,0 +1,33 @@
+:host {
+  display: block;
+}
+
+/* Smooth timeline animations */
+.timeline-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Achievement bullets */
+.achievement-bullet {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Technology badges hover */
+.tech-badge {
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+

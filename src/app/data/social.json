@@ -1,0 +1,22 @@
+[
+  {
+    "platform": "LinkedIn",
+    "icon": "Linkedin",
+    "url": "https://linkedin.com/in/tanuj-gupta-work"
+  },
+  {
+    "platform": "GitHub",
+    "icon": "Github",
+    "url": "https://github.com/tanuj-gupta-work"
+  },
+  {
+    "platform": "Email",
+    "icon": "Mail",
+    "url": "mailto:tanuj.gupta.work@gmail.com"
+  },
+  {
+    "platform": "Twitter",
+    "icon": "Twitter",
+    "url": "https://twitter.com/tanuj_gupta"
+  }
+]

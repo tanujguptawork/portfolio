@@ -1,0 +1,24 @@
+{
+  "name": "Tanuj Gupta",
+  "tagline": "Software Engineer specializing in backend and cloud technologies. Building scalable distributed systems and cloud-native applications that enhance operational efficiency.",
+  "roles": [
+    "Backend Developer",
+    "Cloud Engineer",
+    "API Architect",
+    "System Designer"
+  ],
+  "availability": {
+    "status": true,
+    "text": "Open to new opportunities"
+  },
+  "cta": {
+    "primary": {
+      "text": "Let's Work Together",
+      "link": "#contact"
+    },
+    "secondary": {
+      "text": "View My Work",
+      "link": "#projects"
+    }
+  }
+}

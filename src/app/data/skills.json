@@ -1,0 +1,93 @@
+{
+  "categories": [
+    {
+      "title": "Frontend Development",
+      "icon": "Code2",
+      "color": "from-blue-500 to-cyan-500",
+      "skills": [
+        "Angular",
+        "TypeScript",
+        "JavaScript",
+        "HTML5/CSS3"
+      ]
+    },
+    {
+      "title": "Backend Development",
+      "icon": "Server",
+      "color": "from-green-500 to-emerald-500",
+      "skills": [
+        "Python",
+        "REST API",
+        "Microservices",
+        "JWT",
+        "Serverless",
+        "AWS Lambda"
+      ]
+    },
+    {
+      "title": "Database & Storage",
+      "icon": "Database",
+      "color": "from-purple-500 to-pink-500",
+      "skills": [
+        "DynamoDB",
+        "SQL",
+        "S3"
+      ]
+    },
+    {
+      "title": "AWS Cloud Services",
+      "icon": "Globe",
+      "color": "from-orange-500 to-red-500",
+      "skills": [
+        "AWS",
+        "AWS Lambda",
+        "API Gateway",
+        "S3",
+        "SQS",
+        "SNS",
+        "DynamoDB"
+      ]
+    },
+    {
+      "title": "DevOps & CI/CD",
+      "icon": "Layers",
+      "color": "from-indigo-500 to-blue-500",
+      "skills": [
+        "Docker",
+        "Jenkins",
+        "Git",
+        "CI/CD"
+      ]
+    },
+    {
+      "title": "Monitoring & Testing",
+      "icon": "Zap",
+      "color": "from-yellow-500 to-orange-500",
+      "skills": [
+        "New Relic",
+        "Sonar",
+        "Pytest"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "AWS Certified Developer",
+      "organization": "Amazon Web Services",
+      "year": "2025",
+      "emoji": "☁️"
+    },
+    {
+      "title": "Google Cloud Professional",
+      "organization": "Google Cloud",
+      "year": "2024",
+      "emoji": "🌐"
+    },
+    {
+      "title": "Advanced React Patterns",
+      "organization": "Frontend Masters",
+      "year": "2024",
+      "emoji": "⚛️"
+    }
+  ]
+}

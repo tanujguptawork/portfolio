@@ -1,0 +1,43 @@
+{
+  "email": "tanuj.gupta.work@gmail.com",
+  "phone": "+91-9644398102",
+  "location": "India",
+  "message": "Let's discuss how I can help bring your next project to life with scalable backend solutions and cloud-native architectures.",
+  "contactMethods": [
+    {
+      "icon": "Mail",
+      "title": "Email",
+      "value": "tanuj.gupta.work@gmail.com",
+      "link": "mailto:tanuj.gupta.work@gmail.com"
+    },
+    {
+      "icon": "Phone",
+      "title": "Phone",
+      "value": "+91-9644398102",
+      "link": "tel:+919644398102"
+    },
+    {
+      "icon": "MapPin",
+      "title": "Location",
+      "value": "India",
+      "link": ""
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "icon": "Linkedin",
+      "url": "https://linkedin.com/in/tanuj-gupta-work"
+    },
+    {
+      "platform": "GitHub",
+      "icon": "Github",
+      "url": "https://github.com/tanuj-gupta-work"
+    },
+    {
+      "platform": "Email",
+      "icon": "Mail",
+      "url": "mailto:tanuj.gupta.work@gmail.com"
+    }
+  ]
+}

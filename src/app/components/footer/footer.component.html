@@ -1,0 +1,63 @@
+<footer class="bg-gradient-to-b from-white to-gray-100 py-12 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+            <lucide-icon [img]="Code2" class="w-6 h-6 text-white"></lucide-icon>
+          </div>
+          <span class="text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Tanuj Gupta
+          </span>
+        </div>
+        <p class="text-gray-600">
+          Crafting exceptional digital experiences through elegant code and innovative design.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="mb-4 text-gray-900">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a></li>
+          <li><a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors">Skills</a></li>
+          <li><a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a></li>
+          <li><a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors">Experience</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h4 class="mb-4 text-gray-900">Connect</h4>
+        <div class="flex gap-3">
+          <a
+            *ngFor="let social of socialLinks"
+            [href]="social.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white p-3 rounded-full shadow-md hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white hover:scale-110 transition-all duration-300"
+          >
+            <lucide-icon [img]="getIconClass(social.icon)" class="w-5 h-5"></lucide-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-600 text-center md:text-left">
+        © {{ currentYear }} Tanuj Gupta. All rights reserved.
+      </p>
+      <p class="text-gray-600 flex items-center gap-2">
+        Made with <lucide-icon [img]="Heart" class="w-4 h-4 text-red-500 fill-current"></lucide-icon> and Angular
+      </p>
+      <button
+        (click)="scrollToTop()"
+        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
+      >
+        Back to Top
+      </button>
+    </div>
+  </div>
+</footer>

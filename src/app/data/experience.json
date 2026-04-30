@@ -1,0 +1,89 @@
+{
+  "experiences": [
+    {
+      "type": "work",
+      "title": "Software Engineer",
+      "company": "WatchGuard Technologies",
+      "location": "Noida, India",
+      "period": "April 2025 - Present",
+      "duration": "Current",
+      "description": "WatchGuard Technologies is a cybersecurity company that provides solutions focused on secure network performance",
+      "achievements": [
+        "Designed hierarchical multi-tenant access control system, enabling 10x scalability in account relationships",
+        "Migrated from 1:1 mapping to hierarchy-based architecture, reducing authorization complexity by ~40%",
+        "Built high-performance FastAPI services, reducing API latency by ~30%",
+        "Implemented RBAC and JWT authentication, reducing unauthorized access issues by ~60%",
+        "Created event-driven workflows using SQS and DynamoDB Streams, improving throughput by ~50%",
+        "Reduced production issues by ~30% through robust validation and edge case handling"
+      ],
+      "technologies": ["Python", "FastAPI", "AWS", "SQS", "DynamoDB", "JWT", "RBAC"],
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "type": "work",
+      "title": "Associate Software Engineer",
+      "company": "WatchGuard Technologies",
+      "location": "Noida, India",
+      "period": "August 2023 - April 2025",
+      "duration": "1 yr 9 mos",
+      "description": "WatchGuard Technologies is a cybersecurity company that provides solutions focused on secure network performance",
+      "achievements": [
+        "Integrated breach detection APIs to monitor thousands of domains/emails",
+        "Built near real-time alerting system (<5 mins delay), improving response time significantly",
+        "Improved alert processing efficiency by ~40% using scalable backend workflows",
+        "Developed Angular dashboard, reducing manual tracking effort by ~50%"
+      ],
+      "technologies": ["Python", "Angular", "AWS", "API Integration", "Real-time Systems"],
+      "color": "from-purple-500 to-pink-500"
+    },
+    {
+      "type": "work",
+      "title": "Intern",
+      "company": "WatchGuard Technologies",
+      "location": "Noida, India",
+      "period": "January 2023 - August 2023",
+      "duration": "8 mos",
+      "description": "WatchGuard Technologies is a cybersecurity company that provides solutions focused on secure network performance",
+      "achievements": [
+        "Planned a full-stack platform using Angular and FastAPI",
+        "Built serverless backend reducing infrastructure cost by ~40%",
+        "Implemented CI/CD pipelines reducing deployment time by ~50%",
+        "Delivered end-to-end features independently"
+      ],
+      "technologies": ["Angular", "FastAPI", "Serverless", "CI/CD", "Jenkins"],
+      "color": "from-green-500 to-emerald-500"
+    },
+    {
+      "type": "work",
+      "title": "IT Intern",
+      "company": "DRDO",
+      "location": "Gwalior, India",
+      "period": "June 2022 - July 2022",
+      "duration": "2 mos",
+      "description": "Defence Research and Development Organisation",
+      "achievements": [
+        "Deployed an internal IT inventory management system for the DRDO network",
+        "Automated asset tracking processes reducing manual workload by 40-50%",
+        "Improved data accuracy and operational speed"
+      ],
+      "technologies": ["Inventory Management", "Process Automation"],
+      "color": "from-orange-500 to-amber-500"
+    },
+    {
+      "type": "education",
+      "title": "Bachelor of Technology (B.Tech)",
+      "company": "Manipal University Jaipur",
+      "location": "Jaipur, India",
+      "period": "August 2019 - May 2023",
+      "duration": "4 years",
+      "description": "Completed Bachelor's degree in Computer Science and Engineering with focus on software development, algorithms, and system design",
+      "achievements": [
+        "Graduated with strong foundation in software engineering principles",
+        "Completed multiple projects in web development and cloud computing",
+        "Active participant in technical clubs and hackathons"
+      ],
+      "technologies": ["Data Structures", "Algorithms", "Web Development", "Cloud Computing"],
+      "color": "from-indigo-500 to-purple-500"
+    }
+  ]
+}

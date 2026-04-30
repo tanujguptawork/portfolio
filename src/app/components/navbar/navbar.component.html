@@ -1,0 +1,79 @@
+<nav
+  [class]="'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ' + (isScrolled ? 'bg-white/90 backdrop-blur-lg shadow-lg py-3' : 'bg-transparent py-6')"
+>
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a
+      href="#"
+      (click)="scrollToSection($event, '#')"
+      class="flex items-center gap-2 group"
+      [@fadeIn]
+    >
+      <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg group-hover:scale-110 transition-transform">
+        <lucide-icon [img]="Code2" class="w-6 h-6 text-white"></lucide-icon>
+      </div>
+      <span class="text-xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hidden sm:block">
+        Tanuj Gupta
+      </span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-1 bg-white/80 backdrop-blur-sm px-2 py-2 rounded-full shadow-lg border border-white/20">
+      <a
+        *ngFor="let link of navLinks"
+        [href]="link.href"
+        (click)="scrollToSection($event, link.href)"
+        [class]="'relative px-4 py-2 rounded-full transition-all duration-300 ' + (isActive(link.href) ? 'text-white' : 'text-gray-700 hover:text-blue-600')"
+      >
+        <span
+          *ngIf="isActive(link.href)"
+          class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full"
+        ></span>
+        <span class="relative z-10">{{ link.label }}</span>
+      </a>
+    </div>
+
+    <!-- Hire Me Button (Desktop) -->
+    <a
+      href="#contact"
+      (click)="scrollToSection($event, '#contact')"
+      class="hidden md:block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
+      [@fadeIn]
+    >
+      Hire Me
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button
+      (click)="toggleMobileMenu()"
+      class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+    >
+      <lucide-icon [img]="isMobileMenuOpen ? X : Menu" class="w-6 h-6 text-gray-700"></lucide-icon>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    *ngIf="isMobileMenuOpen"
+    [@fadeIn]
+    class="md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-200 shadow-lg"
+  >
+    <div class="flex flex-col px-4 py-6 gap-2">
+      <a
+        *ngFor="let link of navLinks"
+        [href]="link.href"
+        (click)="scrollToSection($event, link.href)"
+        class="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-3 rounded-lg transition-all"
+      >
+        {{ link.label }}
+      </a>
+      <a
+        href="#contact"
+        (click)="scrollToSection($event, '#contact')"
+        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:shadow-xl transition-all text-center mt-2"
+      >
+        Hire Me
+      </a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,41 @@
+{
+  "bio": [
+    "I am a Software Engineer with over 3 years of experience specializing in backend and cloud technologies. I have solid expertise in designing scalable distributed systems and cloud-native applications.",
+    "My skills include designing microservices architectures and event-driven systems, as well as developing REST APIs that are robust and performance-oriented. I have a proven record of delivering production-grade systems that significantly enhance operational efficiency."
+  ],
+  "quickFacts": {
+    "location": "Noida, India",
+    "experience": "3+ Years",
+    "education": "B.Tech from Manipal University Jaipur",
+    "availability": {
+      "status": true,
+      "text": "Open to opportunities"
+    }
+  },
+  "stats": [
+    {
+      "value": 3,
+      "suffix": "+",
+      "label": "Years Experience",
+      "icon": "Rocket"
+    },
+    {
+      "value": 10,
+      "suffix": "+",
+      "label": "Projects Completed",
+      "icon": "Award"
+    },
+    {
+      "value": 50,
+      "suffix": "%",
+      "label": "Avg Performance Boost",
+      "icon": "Zap"
+    },
+    {
+      "value": 100,
+      "suffix": "%",
+      "label": "Client Satisfaction",
+      "icon": "Users"
+    }
+  ]
+}
