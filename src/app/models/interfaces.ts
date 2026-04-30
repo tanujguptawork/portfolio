@@ -16,6 +16,11 @@ export interface HeroData {
       text: string;
       link: string;
     };
+    /** File name under `public/` (e.g. `resume.pdf` → copied to site root on build). */
+    resume?: {
+      text: string;
+      file: string;
+    };
   };
 }
 

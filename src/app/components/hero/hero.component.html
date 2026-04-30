@@ -45,6 +45,15 @@
         {{ heroData.cta.primary.text }}
       </a>
       <a
+        *ngIf="heroData.cta.resume"
+        [href]="getResumeHref(heroData.cta.resume.file)"
+        download
+        class="group bg-white/80 backdrop-blur-sm border-2 border-gray-200 px-8 py-4 rounded-full hover:border-blue-600 hover:text-blue-700 hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+      >
+        <lucide-icon [img]="FileDown" class="w-5 h-5 group-hover:translate-y-0.5 transition-transform"></lucide-icon>
+        {{ heroData.cta.resume.text }}
+      </a>
+      <a
         [href]="heroData.cta.secondary.link"
         (click)="scrollToSection(heroData.cta.secondary.link)"
         class="group bg-white/80 backdrop-blur-sm border-2 border-gray-200 px-8 py-4 rounded-full hover:border-purple-600 hover:text-purple-600 hover:shadow-xl transition-all duration-300 flex items-center gap-2"

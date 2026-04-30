@@ -1,6 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LucideAngularModule, ArrowDown, Github, Linkedin, Mail, Twitter, Sparkles, Code2, Rocket } from 'lucide-angular';
+import { Component, OnInit, OnDestroy, inject } from '@angular/core';
+import { CommonModule, DOCUMENT } from '@angular/common';
+import { LucideAngularModule, ArrowDown, Github, Linkedin, Mail, Twitter, Sparkles, Code2, Rocket, FileDown } from 'lucide-angular';
 import { ContentService } from '../../services/content.service';
 import { HeroData, SocialLink } from '../../models/interfaces';
 import { fadeInUp, fadeIn } from '../../animations/page.animations';
@@ -14,6 +14,8 @@ import { fadeInUp, fadeIn } from '../../animations/page.animations';
   animations: [fadeInUp, fadeIn]
 })
 export class HeroComponent implements OnInit, OnDestroy {
+  private readonly document = inject(DOCUMENT);
+
   readonly ArrowDown = ArrowDown;
   readonly Github = Github;
   readonly Linkedin = Linkedin;
@@ -22,6 +24,7 @@ export class HeroComponent implements OnInit, OnDestroy {
   readonly Sparkles = Sparkles;
   readonly Code2 = Code2;
   readonly Rocket = Rocket;
+  readonly FileDown = FileDown;
 
   heroData: HeroData | null = null;
   socialLinks: SocialLink[] = [];
@@ -29,6 +32,14 @@ export class HeroComponent implements OnInit, OnDestroy {
   private roleInterval: any;
 
   constructor(private contentService: ContentService) {}
+
+  /** Public file from `public/` — respects `<base href>` for GitHub Pages. */
+  getResumeHref(fileName: string): string {
+    const baseHref =
+      this.document.querySelector('base')?.getAttribute('href')?.trim() || '/';
+    const base = baseHref.endsWith('/') ? baseHref : `${baseHref}/`;
+    return `${base}${fileName}`;
+  }
 
   ngOnInit(): void {
     this.contentService.getHeroData().subscribe(data => {

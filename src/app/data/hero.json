@@ -16,6 +16,10 @@
       "text": "Let's Work Together",
       "link": "#contact"
     },
+    "resume": {
+      "text": "Download Resume",
+      "file": "resume.pdf"
+    },
     "secondary": {
       "text": "View My Work",
       "link": "#projects"
