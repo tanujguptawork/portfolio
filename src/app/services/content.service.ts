@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -16,6 +17,11 @@ import {
   providedIn: 'root'
 })
 export class ContentService {
+  private readonly document = inject(DOCUMENT);
+
+  /** Resolves under `<base href>` so GitHub Pages (`/portfolio/`) and `ng serve` (`/`) both work. */
+  private readonly dataBaseUrl: string;
+
   private heroData$ = new BehaviorSubject<HeroData | null>(null);
   private aboutData$ = new BehaviorSubject<AboutData | null>(null);
   private skillsData$ = new BehaviorSubject<SkillsData | null>(null);
@@ -25,7 +31,14 @@ export class ContentService {
   private socialLinks$ = new BehaviorSubject<SocialLink[] | null>(null);
 
   constructor(private http: HttpClient) {
+    const baseHref =
+      this.document.querySelector('base')?.getAttribute('href')?.trim() || '/';
+    this.dataBaseUrl = baseHref.endsWith('/') ? baseHref : `${baseHref}/`;
     this.loadAllData();
+  }
+
+  private dataUrl(file: string): string {
+    return `${this.dataBaseUrl}app/data/${file}`;
   }
 
   private loadAllData(): void {
@@ -39,7 +52,7 @@ export class ContentService {
   }
 
   loadHeroData(): Observable<HeroData> {
-    return this.http.get<HeroData>('/app/data/hero.json').pipe(
+    return this.http.get<HeroData>(this.dataUrl('hero.json')).pipe(
       tap(data => this.heroData$.next(data))
     );
   }
@@ -49,7 +62,7 @@ export class ContentService {
   }
 
   loadAboutData(): Observable<AboutData> {
-    return this.http.get<AboutData>('/app/data/about.json').pipe(
+    return this.http.get<AboutData>(this.dataUrl('about.json')).pipe(
       tap(data => this.aboutData$.next(data))
     );
   }
@@ -59,7 +72,7 @@ export class ContentService {
   }
 
   loadSkillsData(): Observable<SkillsData> {
-    return this.http.get<SkillsData>('/app/data/skills.json').pipe(
+    return this.http.get<SkillsData>(this.dataUrl('skills.json')).pipe(
       tap(data => this.skillsData$.next(data))
     );
   }
@@ -69,7 +82,7 @@ export class ContentService {
   }
 
   loadProjectsData(): Observable<ProjectsData> {
-    return this.http.get<ProjectsData>('/app/data/projects.json').pipe(
+    return this.http.get<ProjectsData>(this.dataUrl('projects.json')).pipe(
       tap(data => this.projectsData$.next(data))
     );
   }
@@ -79,7 +92,7 @@ export class ContentService {
   }
 
   loadExperienceData(): Observable<ExperienceData> {
-    return this.http.get<ExperienceData>('/app/data/experience.json').pipe(
+    return this.http.get<ExperienceData>(this.dataUrl('experience.json')).pipe(
       tap(data => this.experienceData$.next(data))
     );
   }
@@ -89,7 +102,7 @@ export class ContentService {
   }
 
   loadContactData(): Observable<ContactData> {
-    return this.http.get<ContactData>('/app/data/contact.json').pipe(
+    return this.http.get<ContactData>(this.dataUrl('contact.json')).pipe(
       tap(data => this.contactData$.next(data))
     );
   }
@@ -99,7 +112,7 @@ export class ContentService {
   }
 
   loadSocialLinks(): Observable<SocialLink[]> {
-    return this.http.get<SocialLink[]>('/app/data/social.json').pipe(
+    return this.http.get<SocialLink[]>(this.dataUrl('social.json')).pipe(
       tap(data => this.socialLinks$.next(data))
     );
   }
