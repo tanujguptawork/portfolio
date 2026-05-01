@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule, ExternalLink, Github, Star } from 'lucide-angular';
+import { LucideAngularModule, Star } from 'lucide-angular';
 import { ContentService } from '../../services/content.service';
 import { ProjectsData, Project } from '../../models/interfaces';
 import { fadeInUp, scaleIn } from '../../animations/page.animations';
@@ -14,8 +14,6 @@ import { fadeInUp, scaleIn } from '../../animations/page.animations';
   animations: [fadeInUp, scaleIn]
 })
 export class ProjectsComponent implements OnInit {
-  readonly ExternalLink = ExternalLink;
-  readonly Github = Github;
   readonly Star = Star;
 
   projectsData: ProjectsData | null = null;
